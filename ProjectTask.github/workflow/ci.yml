@@ -1,0 +1,20 @@
+name: Run on Push
+
+# 1. Trigger the workflow whenever code is pushed to any branch
+on: [push]
+
+# 2. Define the tasks (jobs) to run
+jobs:
+  say-hello:
+    # Use the latest Ubuntu Linux virtual machine provided by GitHub
+    runs-on: ubuntu-latest
+
+    # The list of steps to execute sequentially
+    steps:
+      # Step 1: Print a message in the logs
+      - name: Run a diagnostic message
+        run: echo "Code was successfully pushed! Starting automated tasks..."
+
+      # Step 2: Show the current date and time
+      - name: Check server time
+        run: date
