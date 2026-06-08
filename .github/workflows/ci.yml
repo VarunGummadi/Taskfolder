@@ -1,1 +1,13 @@
 name: Run on Push
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a diagnostic message
+        run: echo "Code was successfully pushed! Starting automated tasks..."
+
+      - name: Check server time
+        run: date
